@@ -1,0 +1,12 @@
+prepend_items:
+  - title: Edit
+append_items:
+  - title: "Archive"
+  - title: "Put in trash"
+  - title: "Bookmark"
+  - title: "Close comments"
+  - title: "Don't forget"
+  - title: "Send to Someone"
+    heading: "Share"
+  - title: "View change log"
+    heading: "History"

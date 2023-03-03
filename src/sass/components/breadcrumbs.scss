@@ -1,0 +1,13 @@
+.breadcrumbs {
+  display: flex;
+  gap: 8px;
+}
+
+.breadcrumbs__item {
+  color: var(--blue);
+  text-decoration: underline;
+
+  &:first-child {
+    font-weight: bold;
+  }
+}

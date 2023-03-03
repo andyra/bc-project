@@ -1,0 +1,38 @@
+.folder-nav {
+  border-radius: 8px;
+  border: solid 1px var(--gray-lighter);
+  display: grid;
+  font-size: var(--font-size-sm);
+  grid-template-columns: repeat(4, 1fr);
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+
+.folder-nav__list {
+  border-right: solid 1px var(--gray-lighter);
+  overflow: auto;
+  max-height: 200px; /* magic number */
+  padding: 4px 0;
+}
+
+.folder-nav__item {
+  align-items: center;
+  display: flex;
+  height: 32px;
+  transition: background-color 100ms ease-out;
+}
+
+.folder-nav__item:hover:not(.folder-nav__item--selected) {
+  background-color: var(--gray-lighter);
+}
+
+.folder-nav__item--selected {
+  background-color: var(--blue-lighter);
+}
+
+.folder-nav__button {
+  height: 100%;
+  padding: 0 8px;
+  text-align: left;
+  width: 100%;
+}

@@ -1,0 +1,50 @@
+---
+layout: prototype
+breadcrumbs:
+  - Making a Podcast
+  - To-dos
+  - Episode 11
+menu_items:
+  - title: Move to…
+    actions: menu#next
+  - title: Copy to…
+    actions: menu#next
+menu_sections:
+  - heading: Choose a project
+    items:
+      - title: This Project,
+        action: menu#confirm
+      - title: Blog Revamp,
+        action: menu#confirm
+      - title: CoffeeScript Refactor,
+        action: menu#confirm
+      - title: Customer Support,
+        action: menu#confirm
+      - title: Podcast Production,
+        action: menu#confirm
+  - heading: Select a to-do list…
+    confirm_footer: true
+    items:
+      - title: Episode 11
+        action: menu#selectItem
+      - title: Episode 12
+        action: menu#selectItem
+      - title: Episode 13
+        action: menu#selectItem
+      - title: Episode 14
+        action: menu#selectItem
+      - title: Episode 15
+        action: menu#selectItem
+      - title: Episode 16
+        action: menu#selectItem
+---
+
+<h1><span class="group-highlight">To-Do Group</span></h1>
+
+<p class="text--lg">
+  To-do Groups are a little different becase they need to be placed
+  inside an existing to-do list. This solution accounts for that second
+  layer of hierarchy (Project › To-Do List) via a multi-level menu.
+</p>
+
+{% include menu.html %}

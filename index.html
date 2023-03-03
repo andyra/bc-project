@@ -1,0 +1,217 @@
+---
+layout: home
+---
+
+<h1 data-controller="hello">SFGLKH</h1>
+
+<h1>Andy's Take-Home Project</h1>
+
+<div class="py-lg text-lg">
+  <p>
+    Here are a couple ideas that could make moving/copying feel snappier
+    in Basecamp. I think there are basically two main problems to address:
+  </p>
+  <ul class="list list--decimal">
+    <li>
+      <strong>Can we stay in context?</strong>: As mentioned in the
+      project brief, the current version requires a new page load. That
+      feels a bit disruptive, but luckily there are a few ways to handle
+      in-context workflows!
+    </li>
+    <li>
+      <strong>Can we reduce the number of clicks?</strong>: The current
+      version uses select fields for choosing projects, folders, to-do
+      lists, etc. This isn't so bad if you've just got one or two levels
+      of hierarchy to work with, but gets cumbersome beyond that.
+    </li>
+  </ul>
+
+  <p class="callout">
+    Note: I used "Copy" for the language throughout the prototypes to keep
+    things simple. So don't be too confused if you click "Move" and the UI
+    says "Copy"!
+  </p>
+</div>
+
+<hr />
+
+<div class="py-lg">
+  <h2 class="m-0">Modal</h2>
+  <p class="text-lg">
+    Modals allow you to stay in context of the existing page and provide
+    enough real estate to handle whatever UI we decide to go with.
+  </p>
+  <p class="text-lg">
+    I'd say this is middle ground between the current version and the Menu
+    version below in terms of perceived speediness.
+  </p>
+  <ul class="space-y-sm">
+    <li>
+      <a class="button button--positive" href="/modal-minimal">
+        Modal with minimal UI changes
+      </a>
+    </li>
+    <li>
+      <a class="button button--positive" href="/modal-folder-nav">
+        Modal with folder nav
+      </a>
+    </li>
+  </ul>
+</div>
+
+<div class="py-lg">
+  <h2 class="m-0">Menu</h2>
+  <p class="text-lg">
+    This version leverages the existing menu to let people select a
+    destination for the item they're moving/copying. There are a couple
+    different prototypes to showcase how various types of objects could be
+    handled.
+  </p>
+  <p class="text-lg">
+    It optimizes for keeping you in context at the expense of space; it's
+    compact, so there's not a lot of wiggle room for extra content,
+    explainer text, previews, etc.
+  </p>
+  <ul class="space-y-sm">
+    <li>
+      <a class="button button--positive" href="/menu-default">
+        Menu: default items
+      </a>
+    </li>
+    <li>
+      <a class="button button--positive" href="/menu-lists">
+        Menu: to-dos
+      </a>
+    </li>
+    <li>
+      <a class="button button--positive" href="/menu-docs">
+        Menu: docs & files
+      </a>
+    </li>
+  </ul>
+</div>
+
+<hr />
+
+<div class="py-lg">
+  <h2>Other Notes</h2>
+  <ul class="list list--decimal text-lg">
+    <li>
+      <div class="font--demi">
+        How does the solution work when you want to move several things in
+        succession?
+      </div>
+      <p>
+        The Modal version feels a little more like you're entering a new
+        workflow than the Menu version, which feels less formal. Because
+        of that, I think moving multiple items in succession via the menu
+        would be a little less fatiguing.
+      </p>
+    </li>
+    <li>
+      <div class="font--demi">
+        Should comments be included when copying?
+      </div>
+      <p>
+        No. At least, probably not? Having multiple versions of the same
+        comment thread sounds like it would be confusing for people. If I
+        add a comment on the original object's comment thread, does it
+        carry over to the copied version, or are these now completely
+        independent threads? Where's the best place to respond? What if
+        there were 8 copies of an item—surely 8 copies of the conversation
+        wouldn't be useful?
+      </p>
+      <p>
+        Additionally, the comments might be specific to a certain project,
+        with certain members, etc. Those comments might not be relevant
+        when moved to a different project context.
+      </p>
+      <p>
+        I'm sure there are some good use cases for copying comments, but
+        it's a lot easier to think of the potential weirdness it might
+        cause!
+      </p>
+    </li>
+    <li>
+      <div class="font--demi">
+        Is it essential to see the other items in a folder or on a to-do
+        list when moving items into them?
+      </div>
+      <p>
+        Hmm, good question! I wouldn't say it was <em>essential</em>,
+        exactly, although I could see it coming in handy from time to
+        time. Some thoughts:
+      </p>
+      <ul class="list list--disc">
+        <li>
+          My guess is that most people have a destination in their head
+          when they decide to move an item (e.g. "I need to move this
+          to-do to the Pre-release Checklist"). If that's the case, they
+          already know where they're moving it to.
+        </li>
+        <li>
+          A content preview is probably most useful when you're not very
+          familiar with the to-do list/folder that you're copying
+          something to. I haven't used Basecamp in a large company setting
+          before, so I'm curious how often that comes up in peoples'
+          day-to-day experience. Are people often like "Wait,
+          <em>what</em> folder is this again?"
+        </li>
+        <li>
+          Quite a bit of UI real-estate is needed to show previews. While
+          not a problem in itself, it's probably a trade-off between
+          showing previews and making something feel lightweight.
+        </li>
+        <li>
+          My guess (take that for what it's worth!) is that content
+          previews come in handy upon occasion, but aren't all that useful
+          for the majority of interactions. If that's the case, showing
+          previews by default actually forces people to hunt for the thing
+          they <em>really</em> want, which is the title.
+        </li>
+      </ul>
+    </li>
+    <li>
+      <div class="font--demi">
+        What if you have dozens or hundreds of destinations (projects,
+        folders, lists) for a move or copy?
+      </div>
+      <p>
+        There are a couple strategies that come to mind to sort through
+        large volumes of data:
+      </p>
+      <ul class="list list--disc">
+        <li>
+          <strong>Search</strong>: instead of forcing people to scroll
+          through a lot of options, provide a way for them to type a few
+          characters to narrow the list. A
+          <a
+            href="https://codepen.io/andyra-the-typescripter/pen/yLxMzZx"
+            target="_blank"
+            rel="noopener noreferrer"
+            >combobox field</a
+          >, for example, is snappier than scrolling through select
+          options, but still allows you to scroll through content if
+          you're so inclined.
+        </li>
+        <li>
+          <strong>Provide suggestions</strong>: You could try to be smart
+          about what people are trying to get to: show recently or
+          frequently accessed items at the top. The danger here, of
+          course, is that you will have guessed wrong and the person on
+          the other end of the screen has to find their own way.
+        </li>
+      </ul>
+    </li>
+    <li>
+      <strong>Consider updating the language</strong>
+      <p>
+        It's a minor point, but "Copy" usually means the first half of
+        "Copy & Paste"—copy something, navigate where you want, then paste
+        it there. In this context, it might be more clear to use slightly
+        different language like "Copy to…", which suggests that this isn't
+        your grandma's passive "copy to clipboard" operation.
+      </p>
+    </li>
+  </ul>
+</div>

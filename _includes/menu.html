@@ -1,0 +1,88 @@
+{% assign menu_items = site.data.menu.prepend_items | concat: page.menu_items | concat: site.data.menu.append_items %}
+
+<aside class="menu menu--open" data-controller="menu">
+  <button
+    data-action="menu#next"
+    class="menu__open button button--circle"
+  >
+    <img src="/assets/images/more-horizontal.svg" aria-hidden />
+  </button>
+  <div data-menu-target="menuSection" class="menu__section">
+    <header class="menu__header">
+      <button
+        class="menu__close button button--circle button--inverted"
+        data-action="menu#close"
+      >
+        <img src="/assets/images/x.svg" aria-hidden />
+      </button>
+    </header>
+    <ul class="menu__list">
+      {% for item in menu_items %}
+        {% if item.heading %}
+          <li class="menu__heading">{{ item.heading }}</li>
+        {% endif %}
+        <li class="menu__item">
+          <button
+            class="menu__button menu__button--icon"
+            {% if item.action %}
+              data-action="{{item.action}}"
+            {% endif %}
+          >
+            {{ item.title }}
+          </button>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% if page.menu_sections %}
+    {% for menu_section in page.menu_sections %}
+      <div class="menu__section">
+        <header class="menu__header">
+          <button
+            data-action="menu#prev"
+            class="menu__back button button--circle button--inverted"
+          >
+            <img src="/assets/images/chevron-left.svg" aria-hidden />
+          </button>
+          <div class="menu__title">{{ menu_section.heading }}</div>
+          <button
+            class="menu__close button button--circle button--inverted"
+            data-action="menu#close"
+          >
+            <img src="/assets/images/x.svg" aria-hidden />
+          </button>
+        </header>
+        <ul class="menu__list">
+          {% for item in menu_section.items %}
+            <li data-menu-target="menuItem" class="menu__item">
+              <button data-action="<%= item[:action] %>" class="menu__button">
+                {{ item.title }}
+              </button>
+              {% if item.has_subfolders %}
+                <button
+                  data-action="menu#next"
+                  class=" menu__view-children button button--circle button--sm button--solid button--inverted"
+                  title="View children"
+                >
+                  <img src="/assets/images/arrow-right.svg" aria-hidden />
+                </button>
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+        {% if menu_section.confirm_footer %}
+          <footer class="menu__footer">
+            <button
+              data-action="menu#confirm"
+              data-menu-target="confirmButton"
+              class="button button--solid button--inverted"
+              disabled
+            >
+              Copy here
+            </button>
+          </footer>
+        {% endif %}
+      </div>
+    {% endfor %}
+  {% endif %}
+</aside>

@@ -1,0 +1,35 @@
+---
+layout: prototype
+breadcrumbs:
+  - Making a Podcast
+  - Schedule
+menu_items:
+  - title: Move to…
+    actions: menu#next
+  - title: Copy to…
+    actions: menu#next
+menu_sections:
+  - heading: Choose a project
+    items:
+      - title: This Project,
+        action: menu#confirm
+      - title: Blog Revamp,
+        action: menu#confirm
+      - title: CoffeeScript Refactor,
+        action: menu#confirm
+      - title: Customer Support,
+        action: menu#confirm
+      - title: Podcast Production,
+        action: menu#confirm
+---
+
+<h1>Event/Checkin/Cards/To-Do List/etc.</h1>
+
+<p class="text--lg">
+  Moving/copying items that can't be nested inside other objects is a
+  little more straightforward—we just need people to tell us what
+  project they want to move/copy to and that's it!
+</p>
+
+{% include menu.html %}
+

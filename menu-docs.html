@@ -1,0 +1,61 @@
+---
+layout: prototype
+breadcrumbs:
+  - Making a Podcast
+  - Docs & Files
+menu_items:
+  - title: Move to…
+    actions: menu#next
+  - title: Copy to…
+    actions: menu#next
+menu_sections:
+  - heading: Choose a project
+    items:
+      - title: This Project,
+        action: menu#confirm
+      - title: Blog Revamp,
+        action: menu#confirm
+      - title: CoffeeScript Refactor,
+        action: menu#confirm
+      - title: Customer Support,
+        action: menu#confirm
+      - title: Podcast Production,
+        action: menu#confirm
+  - heading: Select a folder…
+    confirm_footer: true
+    items:
+      - title: Ideas
+        action: menu#selectItem
+        has_subfolders: true
+      - title: Bug Reports
+        action: menu#selectItem
+  - heading: Select a folder…
+    confirm_footer: true
+    items:
+      - title: Good Ideas
+        action: menu#selectItem
+      - title: Funny Ideas
+        action: menu#selectItem
+      - title: Strange Ideas
+        action: menu#selectItem
+---
+
+<h1 class="text-center">Totally Cool Document</h1>
+<p class="text--lg">
+  Files &amp; Documents present the most complexity in terms of
+  hierarchy. The multi-level menu handles an arbitrary number of levels,
+  but we need to allow people to either select a folder, or navigate to
+  its children.
+</p>
+<p class="text--lg">To get a feel for this prototype:</p>
+<ul class="list list--decimal text--lg">
+  <li>Copy the doc to Podcast Production › Ideas</li>
+  <li>Copy the doc to Podcast Production › Ideas › Good Ideas</li>
+</ul>
+<p class="text--lg">
+  It would be interesting to know how many levels of hierarchy customers
+  tend to have. At a guess, I'd think that 6–8 levels would be on the
+  upper end and average would be, um, less than that 🤷.
+</p>
+
+{% include menu.html %}
