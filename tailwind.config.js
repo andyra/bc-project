@@ -1,6 +1,3 @@
----
----
-
 module.exports = {
   theme: {
     extend: {}

@@ -1,45 +1,49 @@
----
-layout: prototype
-breadcrumbs:
-  - Making a Podcast
-  - To-dos
-  - Episode 11
-menu_items:
-  - title: Move to…
-    action: menu#next
-  - title: Copy to…
-    action: menu#next
-menu_sections:
-  - heading: Choose a project
-    items:
-      - title: This Project
-        action: menu#next
-      - title: Blog Revamp
-        action: menu#next
-      - title: CoffeeScript Refactor
-        action: menu#next
-      - title: Customer Support
-        action: menu#next
-      - title: Podcast Production
-        action: menu#next
-  - heading: Select a to-do list…
-    confirm_footer: true
-    items:
-      - title: Episode 11
-        action: menu#selectItem
-      - title: Episode 12
-        action: menu#selectItem
-      - title: Episode 13
-        action: menu#selectItem
-      - title: Episode 14
-        action: menu#selectItem
-      - title: Episode 15
-        action: menu#selectItem
-      - title: Episode 16
-        action: menu#selectItem
----
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <!-- <script src="/assets/bundle.js" type="text/javascript"></script> -->
+    <!-- <link rel="stylesheet" href="/assets/main.css"> -->
+    <script src="assets/bundle.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="assets/main.css">
+  </head>
+  <body>
+    <nav class="nav">
+  <div class="nav__item"><a href="/">Back to Prototypes</a></div>
+  <ul class="nav__list">
+    <li class="nav__item">Home</li>
+    <li class="nav__item">Lineup</li>
+    <li class="nav__item">Pings</li>
+    <li class="nav__item">Hey!</li>
+    <li class="nav__item">Activity</li>
+    <li class="nav__item">My Stuff</li>
+    <li class="nav__item">Find</li>
+  </ul>
+  <div class="nav__profile">AS</div>
+</nav>
 
-<h1><span class="group-highlight">To-Do Group</span></h1>
+<main>
+  
+    <nav class="page-nav panel rounded--top">
+      <ul class="breadcrumbs">
+        
+          <li class="breadcrumbs__item">Making a Podcast</li>
+          
+            <li class="breadcrumbs__separator">›</li>
+          
+          <li class="breadcrumbs__item">To-dos</li>
+          
+            <li class="breadcrumbs__separator">›</li>
+          
+          <li class="breadcrumbs__item">Episode 11</li>
+          
+      </ul>
+    </nav>
+  
+  <div class="page panel panel--lg rounded relative">
+    <h1><span class="group-highlight">To-Do Group</span></h1>
 
 <p class="text--lg">
   To-do Groups are a little different becase they need to be placed
@@ -47,4 +51,276 @@ menu_sections:
   layer of hierarchy (Project › To-Do List) via a multi-level menu.
 </p>
 
-{% include menu.html %}
+
+
+<aside class="menu menu--open" data-controller="menu">
+  <button
+    data-action="menu#next"
+    class="menu__open button button--circle"
+  >
+    <img src="/assets/images/more-horizontal.svg" aria-hidden />
+  </button>
+  <div data-menu-target="menuSection" class="menu__section">
+    <header class="menu__header">
+      <button
+        class="menu__close button button--circle button--inverted"
+        data-action="menu#close"
+      >
+        <img src="/assets/images/x.svg" aria-hidden />
+      </button>
+    </header>
+    <ul class="menu__list">
+      
+        
+        <li class="menu__item">
+          <button
+            class="menu__button menu__button--icon"
+            
+          >
+            Edit
+          </button>
+        </li>
+      
+        
+        <li class="menu__item">
+          <button
+            class="menu__button menu__button--icon"
+            
+              data-action="menu#next"
+            
+          >
+            Move to…
+          </button>
+        </li>
+      
+        
+        <li class="menu__item">
+          <button
+            class="menu__button menu__button--icon"
+            
+              data-action="menu#next"
+            
+          >
+            Copy to…
+          </button>
+        </li>
+      
+        
+        <li class="menu__item">
+          <button
+            class="menu__button menu__button--icon"
+            
+          >
+            Archive
+          </button>
+        </li>
+      
+        
+        <li class="menu__item">
+          <button
+            class="menu__button menu__button--icon"
+            
+          >
+            Put in trash
+          </button>
+        </li>
+      
+        
+        <li class="menu__item">
+          <button
+            class="menu__button menu__button--icon"
+            
+          >
+            Bookmark
+          </button>
+        </li>
+      
+        
+        <li class="menu__item">
+          <button
+            class="menu__button menu__button--icon"
+            
+          >
+            Close comments
+          </button>
+        </li>
+      
+        
+        <li class="menu__item">
+          <button
+            class="menu__button menu__button--icon"
+            
+          >
+            Don't forget
+          </button>
+        </li>
+      
+        
+          <li class="menu__heading">Share</li>
+        
+        <li class="menu__item">
+          <button
+            class="menu__button menu__button--icon"
+            
+          >
+            Send to Someone
+          </button>
+        </li>
+      
+        
+          <li class="menu__heading">History</li>
+        
+        <li class="menu__item">
+          <button
+            class="menu__button menu__button--icon"
+            
+          >
+            View change log
+          </button>
+        </li>
+      
+    </ul>
+  </div>
+  
+    
+      <div class="menu__section">
+        <header class="menu__header">
+          <button
+            data-action="menu#prev"
+            class="menu__back button button--circle button--inverted"
+          >
+            <img src="/assets/images/chevron-left.svg" aria-hidden />
+          </button>
+          <div class="menu__title">Choose a project</div>
+          <button
+            class="menu__close button button--circle button--inverted"
+            data-action="menu#close"
+          >
+            <img src="/assets/images/x.svg" aria-hidden />
+          </button>
+        </header>
+        <ul class="menu__list">
+          
+            <li data-menu-target="menuItem" class="menu__item">
+              <button data-action="menu#next" class="menu__button">
+                This Project
+              </button>
+              
+            </li>
+          
+            <li data-menu-target="menuItem" class="menu__item">
+              <button data-action="menu#next" class="menu__button">
+                Blog Revamp
+              </button>
+              
+            </li>
+          
+            <li data-menu-target="menuItem" class="menu__item">
+              <button data-action="menu#next" class="menu__button">
+                CoffeeScript Refactor
+              </button>
+              
+            </li>
+          
+            <li data-menu-target="menuItem" class="menu__item">
+              <button data-action="menu#next" class="menu__button">
+                Customer Support
+              </button>
+              
+            </li>
+          
+            <li data-menu-target="menuItem" class="menu__item">
+              <button data-action="menu#next" class="menu__button">
+                Podcast Production
+              </button>
+              
+            </li>
+          
+        </ul>
+        
+      </div>
+    
+      <div class="menu__section">
+        <header class="menu__header">
+          <button
+            data-action="menu#prev"
+            class="menu__back button button--circle button--inverted"
+          >
+            <img src="/assets/images/chevron-left.svg" aria-hidden />
+          </button>
+          <div class="menu__title">Select a to-do list…</div>
+          <button
+            class="menu__close button button--circle button--inverted"
+            data-action="menu#close"
+          >
+            <img src="/assets/images/x.svg" aria-hidden />
+          </button>
+        </header>
+        <ul class="menu__list">
+          
+            <li data-menu-target="menuItem" class="menu__item">
+              <button data-action="menu#selectItem" class="menu__button">
+                Episode 11
+              </button>
+              
+            </li>
+          
+            <li data-menu-target="menuItem" class="menu__item">
+              <button data-action="menu#selectItem" class="menu__button">
+                Episode 12
+              </button>
+              
+            </li>
+          
+            <li data-menu-target="menuItem" class="menu__item">
+              <button data-action="menu#selectItem" class="menu__button">
+                Episode 13
+              </button>
+              
+            </li>
+          
+            <li data-menu-target="menuItem" class="menu__item">
+              <button data-action="menu#selectItem" class="menu__button">
+                Episode 14
+              </button>
+              
+            </li>
+          
+            <li data-menu-target="menuItem" class="menu__item">
+              <button data-action="menu#selectItem" class="menu__button">
+                Episode 15
+              </button>
+              
+            </li>
+          
+            <li data-menu-target="menuItem" class="menu__item">
+              <button data-action="menu#selectItem" class="menu__button">
+                Episode 16
+              </button>
+              
+            </li>
+          
+        </ul>
+        
+          <footer class="menu__footer">
+            <button
+              data-action="menu#confirm"
+              data-menu-target="confirmButton"
+              class="button button--solid button--inverted"
+              disabled
+            >
+              Copy here
+            </button>
+          </footer>
+        
+      </div>
+    
+  
+</aside>
+
+
+  </div>
+</main>
+
+  </body>
+</html>

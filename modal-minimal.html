@@ -1,16 +1,45 @@
----
-layout: prototype
-breadcrumbs:
-  - Making a Podcast
-  - Docs & Files
-menu_items:
-  - title: Move to…
-    action: dialog#open
-  - title: Copy to…
-    action: dialog#open
----
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <!-- <script src="/assets/bundle.js" type="text/javascript"></script> -->
+    <!-- <link rel="stylesheet" href="/assets/main.css"> -->
+    <script src="assets/bundle.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="assets/main.css">
+  </head>
+  <body>
+    <nav class="nav">
+  <div class="nav__item"><a href="/">Back to Prototypes</a></div>
+  <ul class="nav__list">
+    <li class="nav__item">Home</li>
+    <li class="nav__item">Lineup</li>
+    <li class="nav__item">Pings</li>
+    <li class="nav__item">Hey!</li>
+    <li class="nav__item">Activity</li>
+    <li class="nav__item">My Stuff</li>
+    <li class="nav__item">Find</li>
+  </ul>
+  <div class="nav__profile">AS</div>
+</nav>
 
-<div data-controller="dialog">
+<main>
+  
+    <nav class="page-nav panel rounded--top">
+      <ul class="breadcrumbs">
+        
+          <li class="breadcrumbs__item">Making a Podcast</li>
+          
+            <li class="breadcrumbs__separator">›</li>
+          
+          <li class="breadcrumbs__item">Docs & Files</li>
+          
+      </ul>
+    </nav>
+  
+  <div class="page panel panel--lg rounded relative">
+    <div data-controller="dialog">
   <h1>Simple Modal</h1>
 
   <p class="text--lg">
@@ -26,9 +55,151 @@ menu_items:
     behind the dialog backdrop.
   </p>
 
-  {% include menu.html%}
+  
 
-  {% capture dialog_content %}
+<aside class="menu menu--open" data-controller="menu">
+  <button
+    data-action="menu#next"
+    class="menu__open button button--circle"
+  >
+    <img src="/assets/images/more-horizontal.svg" aria-hidden />
+  </button>
+  <div data-menu-target="menuSection" class="menu__section">
+    <header class="menu__header">
+      <button
+        class="menu__close button button--circle button--inverted"
+        data-action="menu#close"
+      >
+        <img src="/assets/images/x.svg" aria-hidden />
+      </button>
+    </header>
+    <ul class="menu__list">
+      
+        
+        <li class="menu__item">
+          <button
+            class="menu__button menu__button--icon"
+            
+          >
+            Edit
+          </button>
+        </li>
+      
+        
+        <li class="menu__item">
+          <button
+            class="menu__button menu__button--icon"
+            
+              data-action="dialog#open"
+            
+          >
+            Move to…
+          </button>
+        </li>
+      
+        
+        <li class="menu__item">
+          <button
+            class="menu__button menu__button--icon"
+            
+              data-action="dialog#open"
+            
+          >
+            Copy to…
+          </button>
+        </li>
+      
+        
+        <li class="menu__item">
+          <button
+            class="menu__button menu__button--icon"
+            
+          >
+            Archive
+          </button>
+        </li>
+      
+        
+        <li class="menu__item">
+          <button
+            class="menu__button menu__button--icon"
+            
+          >
+            Put in trash
+          </button>
+        </li>
+      
+        
+        <li class="menu__item">
+          <button
+            class="menu__button menu__button--icon"
+            
+          >
+            Bookmark
+          </button>
+        </li>
+      
+        
+        <li class="menu__item">
+          <button
+            class="menu__button menu__button--icon"
+            
+          >
+            Close comments
+          </button>
+        </li>
+      
+        
+        <li class="menu__item">
+          <button
+            class="menu__button menu__button--icon"
+            
+          >
+            Don't forget
+          </button>
+        </li>
+      
+        
+          <li class="menu__heading">Share</li>
+        
+        <li class="menu__item">
+          <button
+            class="menu__button menu__button--icon"
+            
+          >
+            Send to Someone
+          </button>
+        </li>
+      
+        
+          <li class="menu__heading">History</li>
+        
+        <li class="menu__item">
+          <button
+            class="menu__button menu__button--icon"
+            
+          >
+            View change log
+          </button>
+        </li>
+      
+    </ul>
+  </div>
+  
+</aside>
+
+
+  
+  <dialog data-dialog-target="dialog" class="dialog">
+  <h2 class="dialog__title">Copy this document to…</h2>
+  <select data-dialog-target="select" class="select select--lg">
+    <option>This Project</option>
+    <option>Blog Revamp</option>
+    <option>CoffeeScript Refactor</option>
+    <option>Customer Support</option>
+    <option>Podcast Production</option>
+  </select>
+  
     <div class="dialog__subselect">
       →
       <select data-dialog-target="select" class="select select--lg">
@@ -43,6 +214,31 @@ menu_items:
       <strong>Note</strong>: This part of the prototype isn't fleshed out
       since it works like the current Basecamp version. You get the idea!
     </p>
-  {% endcapture %}
-  {% include dialog.html dialog_content=dialog_content %}
+  
+  <form method="dialog">
+    <footer class="dialog__footer">
+      <button
+        data-action="dialog#confirm"
+        class="button button--positive button--solid button--lg"
+        id="confirmBtn"
+        value="default"
+      >
+        Copy Here
+      </button>
+      <button class="button button--positive button--lg" value="cancel">
+        Never mind
+      </button>
+      <button class="dialog__close button button--circle" title="Close modal">
+        <img src="assets/images/x-dark.svg" aria-hidden />
+      </button>
+    </footer>
+  </form>
+</dialog>
+
 </div>
+
+  </div>
+</main>
+
+  </body>
+</html>
