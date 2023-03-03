@@ -55,7 +55,7 @@
         <ul class="menu__list">
           {% for item in menu_section.items %}
             <li data-menu-target="menuItem" class="menu__item">
-              <button data-action="<%= item[:action] %>" class="menu__button">
+              <button data-action="{{ item.action }}" class="menu__button">
                 {{ item.title }}
               </button>
               {% if item.has_subfolders %}

@@ -15,7 +15,7 @@
     "webpack-cli": "^3.3.11"
   },
   "dependencies": {
-    "stimulus": "^1.1.1",
+    "stimulus": "^3.2.1",
     "tailwindcss": "^1.4.6"
   }
 }

@@ -8,6 +8,35 @@ menu_items:
     action: dialog#open
   - title: Copy to…
     action: dialog#open
+folder_sections:
+  -
+    - Folder A
+    - Folder B
+    - Folder C
+    - Folder D
+    - Folder E
+    - Folder F
+  -
+    - Folder A
+    - Folder B
+    - Folder C
+    - Folder D
+    - Folder E
+    - Folder F
+    - Folder G
+    - Folder H
+    - Folder I
+    - Folder J
+  -
+    - Folder A
+    - Folder B
+    - Folder C
+    - Folder D
+    - Folder E
+  -
+    - Folder A
+    - Folder B
+    - Folder C
 ---
 
 <div data-controller="dialog">
@@ -24,47 +53,23 @@ menu_items:
     helpful.
   </p>
 
-  <%= render "menu", menu_items: @menu_items %>
+  {% include menu.html %}
 
-  <dialog data-dialog-target="minimalDialog" class="dialog">
-    <h2 class="dialog__title">Copy this document to…</h2>
-    <div class="font--medium mb-sm">Choose a project</div>
-    <select data-dialog-target="select" class="select select--lg mb-md">
-      <option>This Project</option>
-      <option>Blog Revamp</option>
-      <option>CoffeeScript Refactor</option>
-      <option>Customer Support</option>
-      <option>Podcast Production</option>
-    </select>
+  {% capture dialog_content %}
     <div class="font--medium mb-sm">Choose a folder</div>
     <div class="folder-nav" data-controller="folderNav">
-      <% @folder_sections.each do |folders| %>
+      {% for folders in page.folder_sections %}
         <ul data-folderNav-target="list" class="folder-nav__list">
-          <% folders.each do |folder_name| %>
+          {% for folder in folders %}
             <li class="folder-nav__item">
               <button data-action="folderNav#select" class="folder-nav__button">
-                Folder <%= folder_name %>
+                Folder {{ folder }}
               </button>
             </li>
-          <% end %>
+          {% endfor %}
         </ul>
-      <% end %>
+      {% endfor %}
     </div>
-    <form class="dialog__footer" method="dialog">
-      <button
-        data-action="dialog#confirm"
-        class="button button--positive button--solid button--lg"
-        id="confirmBtn"
-        value="default"
-      >
-        Copy Here
-      </button>
-      <button class="button button--positive button--lg" value="cancel">
-        Never mind
-      </button>
-      <button class="dialog__close button button--circle">
-        <%= image_tag "x-dark.svg" %>
-      </button>
-    </form>
-  </dialog>
+  {% endcapture %}
+  {% include dialog.html dialog_content=dialog_content %}
 </div>
