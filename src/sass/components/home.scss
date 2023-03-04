@@ -1,0 +1,12 @@
+.home-section {
+  @apply py-12 text-xl;
+
+  + .home-section {
+    @apply border-t-2;
+    border-color: var(--gray-lighter);
+  }
+}
+
+.home-section__heading {
+  @apply mb-2;
+}

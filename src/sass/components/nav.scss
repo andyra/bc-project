@@ -21,16 +21,16 @@
   gap: 4px;
   padding: 0 12px;
   position: relative;
-}
 
-/* Icon placeholders */
-.nav__item:before {
-  background-color: var(--gray-dark);
-  border-radius: 50%;
-  content: "";
-  height: 16px;
-  opacity: 0.25;
-  width: 16px;
+  /* Icon placeholders */
+  &:before {
+    background-color: var(--gray-dark);
+    border-radius: 50%;
+    content: "";
+    height: 16px;
+    opacity: 0.25;
+    width: 16px;
+  }
 }
 
 .nav__profile {

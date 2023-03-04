@@ -34,13 +34,6 @@ export default class extends Controller {
 
   confirm() {
     this.close();
-    Toastify({
-      text: "Item copied/moved to [Project Name]!",
-      position: "center",
-      style: {
-        background: "hsl(147, 57%, 41%)",
-      },
-    }).showToast();
   }
 
   selectItem(event) {

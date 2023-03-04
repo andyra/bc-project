@@ -10,17 +10,13 @@ menu_items:
     action: dialog#open
 ---
 
-<div data-controller="dialog">
-  <h1>Simple Modal</h1>
+<div data-controller="dialog selectNav">
+  <h1 class="page__title">Modal with minimal UI changes</h1>
 
-  <p class="text--lg">
-    This version would be worth checking out if the appetite for work was
-    fairly small since it leverages the existing workflow for
-    moving/copying items. The main difference is that the content appears
-    in a modal instead of a separate page. All the interaction within the
-    modal would remain the same.
+  <p>
+    This version would be worth checking out if the appetite for work was small since it leverages the existing workflow for moving/copying items. The main difference is that the content appears in a modal instead of a separate page. All the interaction within the modal would remain the same.
   </p>
-  <p class="text--lg">
+  <p>
     To make things even simpler, I think we could probably do away with
     the thumbnail since the actual thing you're moving will be visible
     behind the dialog backdrop.
@@ -29,20 +25,45 @@ menu_items:
   {% include menu.html%}
 
   {% capture dialog_content %}
-    <div class="dialog__subselect">
-      →
-      <select data-dialog-target="select" class="select select--lg">
-        <option>Docs & Files</option>
-        <option>Ideas</option>
-        <option>Folder A</option>
-        <option>Folder B</option>
-        <option>Folder C</option>
-      </select>
+    <select data-selectNav-target="select" class="dialog__select select select--lg">
+      <option>This Project</option>
+      <option>Blog Revamp</option>
+      <option>CoffeeScript Refactor</option>
+      <option>Customer Support</option>
+      <option>Podcast Production</option>
+    </select>
+    <div class="dialog__subsection">
+      <div class="dialog__subselect">
+        <img src="assets/images/corner-down-right.svg" aria-hidden />
+        <select data-selectNav-target="select" data-action="selectNav#select" class="select select--lg">
+          <option>Docs & Files</option>
+          <option>Ideas</option>
+          <option>Folder A</option>
+          <option>Folder B</option>
+          <option>Folder C</option>
+        </select>
+      </div>
+      <div class="dialog__subsection hidden">
+        <div class="dialog__subselect">
+          <img src="assets/images/corner-down-right.svg" aria-hidden />
+          <select data-selectNav-target="select" data-action="selectNav#select" class="select select--lg">
+            <option>Folder A</option>
+            <option>Folder B</option>
+            <option>Folder C</option>
+          </select>
+        </div>
+        <div class="dialog__subsection hidden">
+          <div class="dialog__subselect">
+            <img src="assets/images/corner-down-right.svg" aria-hidden />
+            <select data-selectNav-target="select" data-action="selectNav#select" class="select select--lg">
+              <option>Folder E</option>
+              <option>Folder F</option>
+              <option>Folder G</option>
+            </select>
+          </div>
+        </div>
+      </div>
     </div>
-    <p class="callout">
-      <strong>Note</strong>: This part of the prototype isn't fleshed out
-      since it works like the current Basecamp version. You get the idea!
-    </p>
   {% endcapture %}
   {% include dialog.html dialog_content=dialog_content %}
 </div>

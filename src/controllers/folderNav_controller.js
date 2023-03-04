@@ -27,7 +27,6 @@ export default class extends Controller {
   }
 
   indexValueChanged() {
-    console.log("indexValue Changed");
     this.showLists();
   }
 

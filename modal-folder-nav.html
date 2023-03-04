@@ -39,31 +39,37 @@ folder_sections:
     - Folder C
 ---
 
-<div data-controller="dialog">
-  <h1>Modal with Folder Nav</h1>
-  <p class="text--lg">
-    This version attempts to reduce the number of clicks when navigating
-    folders. Currently, you have to 1) click the select field and 2) click
-    the folder you want.
+<div data-controller="dialog folderNav">
+  <h1 class="page__title">Modal with Folder Nav</h1>
+  <p>
+    This version helps to reduce the number of clicks when navigating folders. Currently, you have to 1) click the select field and 2) click the folder you want. Here, we're cutting that number in half.
   </p>
-  <p class="text--lg">
-    Folder navigation is well trod territory, so it might be helpful to
-    take a cue from existing patterns. As a bonus, you could also display
-    the contents of the selected folder in case that extra context is
-    helpful.
+  <p>
+    To reduce clicks further, we could have a project pre-selected when the modal opens—perhaps the last project they copied something to.
+  </p>
+  <p>
+    Folder navigation is well trod territory, so it might be helpful to take a cue from existing patterns. As a bonus, you could also display the contents of the selected folder in case that extra context is helpful.
   </p>
 
   {% include menu.html %}
 
   {% capture dialog_content %}
-    <div class="font--medium mb-sm">Choose a folder</div>
+    <select class="dialog__select select select--lg">
+      <option>This Project</option>
+      <option>Blog Revamp</option>
+      <option>CoffeeScript Refactor</option>
+      <option>Customer Support</option>
+      <option>Podcast Production</option>
+    </select>
+
+    <div class="font-medium text-base mb-2">Choose a folder</div>
     <div class="folder-nav" data-controller="folderNav">
       {% for folders in page.folder_sections %}
         <ul data-folderNav-target="list" class="folder-nav__list">
           {% for folder in folders %}
             <li class="folder-nav__item">
               <button data-action="folderNav#select" class="folder-nav__button">
-                Folder {{ folder }}
+                {{ folder }}
               </button>
             </li>
           {% endfor %}

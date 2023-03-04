@@ -5,6 +5,7 @@
   border: solid 1px var(--gray-lighter);
   cursor: pointer;
   display: flex;
+  font-size: 16px;
   height: 32px;
   justify-content: center;
   padding: 0 12px;
@@ -14,6 +15,11 @@
   img {
     height: 20px;
     width: 20px;
+  }
+
+  &[disabled] {
+    opacity: 0.35;
+    pointer-events: none;
   }
 }
 
@@ -27,7 +33,7 @@
 }
 
 .button--lg {
-  font-size: var(--font-size-base);
+  font-size: var(--font-size-lg);
   height: 40px;
 
   img {
@@ -40,39 +46,34 @@
   flex-shrink: 0; /* These should never be smooshed in flex contexts */
   padding: 0;
   width: 32px;
-}
 
-.button--circle.button--sm {
-  width: 24px;
-}
+  &.button--sm {
+    width: 24px;
+  }
 
-.button--circle.button--sm {
-  width: 24px;
+  &.button--lg {
+    width: 40px;
+  }
 }
 
 .button--inverted {
   border-color: rgba(255, 255, 255, 0.15);
   color: var(--white);
-}
 
-.button--inverted.button--solid {
-  background-color: var(--white);
-  border-color: var(--white);
-  color: var(--gray-dark);
+  &.button--solid {
+    background-color: var(--white);
+    border-color: var(--white);
+    color: var(--gray-dark);
+  }
 }
 
 .button--positive {
   border-color: var(--green);
   color: var(--green);
-}
 
-.button--positive.button--solid {
-  background-color: var(--green);
-  border-color: var(--green);
-  color: var(--white);
-}
-
-.button[disabled] {
-  opacity: 0.35;
-  pointer-events: none;
+  &.button--solid {
+    background-color: var(--green);
+    border-color: var(--green);
+    color: var(--white);
+  }
 }

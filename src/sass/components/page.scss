@@ -1,5 +1,10 @@
 .page {
+  @apply text-xl;
   min-height: 80vh;
+}
+
+.page__title {
+  @apply mb-8;
 }
 
 .page-nav {

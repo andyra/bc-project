@@ -12,6 +12,10 @@
   width: var(--menu-width);
 }
 
+.menu--static {
+  position: static;
+}
+
 .menu__open {
   position: absolute;
   right: var(--padding-x);
@@ -42,6 +46,10 @@
   width: var(--menu-width);
 }
 
+.menu__open + .menu__section {
+  margin-left: 260px;
+}
+
 .menu__heading {
   font-size: inherit;
   font-weight: bold;
@@ -49,8 +57,23 @@
   padding: 8px var(--padding-x);
 }
 
+.menu__input {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 999rem;
+  border: none;
+  margin-top: 4px;
+  padding: 1px 8px;
+  width: 100%;
+
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+  }
+}
+
 .menu__list {
   margin: 0 calc(var(--padding-x) * -1);
+  max-height: 320px;
+  overflow-y: auto;
 }
 
 .menu__item {
@@ -74,6 +97,11 @@
   padding: 0 var(--padding-x);
   right: 0;
   top: 0;
+
+  &:active,
+  &:focus {
+    outline: none;
+  }
 }
 
 .menu__view-children {

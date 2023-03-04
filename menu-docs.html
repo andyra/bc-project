@@ -40,22 +40,17 @@ menu_sections:
         action: menu#selectItem
 ---
 
-<h1 class="text-center">Totally Cool Document</h1>
-<p class="text--lg">
+<h1 class="page__title">Totally Cool Document</h1>
+<p>
   Files &amp; Documents present the most complexity in terms of
   hierarchy. The multi-level menu handles an arbitrary number of levels,
   but we need to allow people to either select a folder, or navigate to
   its children.
 </p>
-<p class="text--lg">To get a feel for this prototype:</p>
-<ul class="list list--decimal text--lg">
-  <li>Copy the doc to Podcast Production › Ideas</li>
-  <li>Copy the doc to Podcast Production › Ideas › Good Ideas</li>
+<p>To get a feel for this prototype:</p>
+<ul class="list list--decimal">
+  <li>Copy the doc to <strong>Podcast Production › Ideas</strong></li>
+  <li>Copy the doc to <strong>Podcast Production › Ideas › Good Ideas</strong></li>
 </ul>
-<p class="text--lg">
-  It would be interesting to know how many levels of hierarchy customers
-  tend to have. At a guess, I'd think that 6–8 levels would be on the
-  upper end and average would be, um, less than that 🤷.
-</p>
 
 {% include menu.html %}
