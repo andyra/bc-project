@@ -141929,22 +141929,6 @@ p {
   margin-bottom: 1em;
 }
 
-/* Document
-/* ================================================== */
-
-.document-header {
-  margin-top: -2rem;
-}
-
-/* Home
-/* ================================================== */
-
-.group-highlight {
-  background: #faf785;
-  border-radius: 8px;
-  padding: 4px;
-}
-
 .breadcrumbs {
   display: flex;
   gap: 8px;

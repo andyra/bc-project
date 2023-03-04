@@ -4,14 +4,12 @@
     <meta charset="UTF-8" />
     <title></title>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <!-- <script src="/assets/bundle.js" type="text/javascript"></script> -->
-    <!-- <link rel="stylesheet" href="/assets/main.css"> -->
     <script src="assets/bundle.js" type="text/javascript"></script>
     <link rel="stylesheet" href="assets/main.css">
   </head>
   <body>
     <nav class="nav">
-  <div class="nav__item"><a href="../">Fakecamp</a></div>
+  <div class="nav__item"><a href="../">← Back</a></div>
   <ul class="nav__list">
     <li class="nav__item">Home</li>
     <li class="nav__item">Lineup</li>
@@ -42,14 +40,12 @@
     <div data-controller="dialog folderNav">
   <h1 class="page__title">Modal with Folder Nav</h1>
   <p>
-    This version helps to reduce the number of clicks when navigating folders. Currently, you have to 1) click the select field and 2) click the folder you want. Here, we're cutting that number in half.
+    This version reduces the number of clicks when navigating folders. Currently, you have to 1) click the select field and 2) click the folder you want. Here, we're cutting that number in half. To reduce clicks further, we could have a project pre-selected when the modal opens—perhaps the last project they copied something to.
   </p>
   <p>
-    To reduce clicks further, we could have a project pre-selected when the modal opens—perhaps the last project they copied something to.
+    As a bonus, you could also display the contents of the selected folder in case that extra context is helpful.
   </p>
-  <p>
-    Folder navigation is well trod territory, so it might be helpful to take a cue from existing patterns. As a bonus, you could also display the contents of the selected folder in case that extra context is helpful.
-  </p>
+  <p>If you were moving list items, the UI would be similar, except there would be a single scrollable section of To-do lists instead of folders.</p>
 
   
 
@@ -188,6 +184,7 @@
   
   <dialog data-dialog-target="dialog" class="dialog">
   <h2 class="dialog__title">Copy this document to…</h2>
+  <div class="font-medium text-base mb-2">Choose a project</div>
   
     <select class="dialog__select select select--lg">
       <option>This Project</option>
