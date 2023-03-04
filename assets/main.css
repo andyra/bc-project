@@ -141916,25 +141916,17 @@ main {
 }
 
 h1 {
-  margin-top: 0;
+  font-weight: 700;
+  font-size: 2.25rem;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 1.5rem;
 }
 
 p {
-  margin-top: 0;
-}
-
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-button {
-  background: none;
-  border: none;
-  color: inherit;
-  font-family: inherit;
-  font-size: inherit;
+  margin-bottom: 1em;
 }
 
 /* Document
@@ -141974,6 +141966,7 @@ button {
   border: solid 1px var(--gray-lighter);
   cursor: pointer;
   display: flex;
+  font-size: 16px;
   height: 32px;
   justify-content: center;
   padding: 0 12px;
@@ -141987,6 +141980,11 @@ button {
   width: 20px;
 }
 
+.button[disabled] {
+  opacity: 0.35;
+  pointer-events: none;
+}
+
 .button--sm {
   height: 24px;
 }
@@ -141997,7 +141995,7 @@ button {
 }
 
 .button--lg {
-  font-size: var(--font-size-base);
+  font-size: var(--font-size-lg);
   height: 40px;
 }
 
@@ -142016,8 +142014,8 @@ button {
   width: 24px;
 }
 
-.button--circle.button--sm {
-  width: 24px;
+.button--circle.button--lg {
+  width: 40px;
 }
 
 .button--inverted {
@@ -142040,11 +142038,6 @@ button {
   background-color: var(--green);
   border-color: var(--green);
   color: var(--white);
-}
-
-.button[disabled] {
-  opacity: 0.35;
-  pointer-events: none;
 }
 
 .callout {
@@ -142071,14 +142064,22 @@ button {
 }
 
 .dialog__title {
-  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+.dialog__select {
+  margin-bottom: 1rem;
+}
+
+.dialog__subsection > .dialog__subsection {
+  padding-left: 32px;
 }
 
 .dialog__subselect {
+  margin-bottom: 1rem;
   align-items: center;
   display: flex;
-  gap: 16px;
-  margin: 1em 0;
+  gap: 8px;
 }
 
 .dialog__footer {
@@ -142132,9 +142133,28 @@ button {
   width: 100%;
 }
 
+.folder-nav__button:focus, .folder-nav__button:hover, .folder-nav__button:active {
+  outline: none;
+}
+
+.home-section {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  font-size: 1.25rem;
+}
+
+.home-section + .home-section {
+  border-top-width: 2px;
+  border-color: var(--gray-lighter);
+}
+
+.home-section__heading {
+  margin-bottom: 0.5rem;
+}
+
 .list {
-  padding-left: 1em;
   margin-bottom: 1em;
+  padding-left: 1em;
 }
 
 .list--decimal {
@@ -142156,6 +142176,10 @@ button {
   top: 0;
   right: 0;
   width: var(--menu-width);
+}
+
+.menu--static {
+  position: static;
 }
 
 .menu__open {
@@ -142188,6 +142212,10 @@ button {
   width: var(--menu-width);
 }
 
+.menu__open + .menu__section {
+  margin-left: 260px;
+}
+
 .menu__heading {
   font-size: inherit;
   font-weight: bold;
@@ -142195,8 +142223,27 @@ button {
   padding: 8px var(--padding-x);
 }
 
+.menu__input {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 999rem;
+  border: none;
+  margin-top: 4px;
+  padding: 1px 8px;
+  width: 100%;
+}
+
+.menu__input::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.menu__input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
 .menu__list {
   margin: 0 calc(var(--padding-x) * -1);
+  max-height: 320px;
+  overflow-y: auto;
 }
 
 .menu__item {
@@ -142220,6 +142267,10 @@ button {
   padding: 0 var(--padding-x);
   right: 0;
   top: 0;
+}
+
+.menu__button:active, .menu__button:focus {
+  outline: none;
 }
 
 .menu__view-children {
@@ -142280,9 +142331,8 @@ button {
   gap: 4px;
   padding: 0 12px;
   position: relative;
+  /* Icon placeholders */
 }
-
-/* Icon placeholders */
 
 .nav__item:before {
   background-color: var(--gray-dark);
@@ -142306,7 +142356,12 @@ button {
 }
 
 .page {
+  font-size: 1.25rem;
   min-height: 80vh;
+}
+
+.page__title {
+  margin-bottom: 2rem;
 }
 
 .page-nav {

@@ -11,7 +11,7 @@
   </head>
   <body>
     <nav class="nav">
-  <div class="nav__item"><a href="../">Back to Prototypes</a></div>
+  <div class="nav__item"><a href="../">Fakecamp</a></div>
   <ul class="nav__list">
     <li class="nav__item">Home</li>
     <li class="nav__item">Lineup</li>
@@ -39,23 +39,21 @@
     </nav>
   
   <div class="page panel panel--lg rounded relative">
-    <div data-controller="dialog">
-  <h1>Modal with Folder Nav</h1>
-  <p class="text--lg">
-    This version attempts to reduce the number of clicks when navigating
-    folders. Currently, you have to 1) click the select field and 2) click
-    the folder you want.
+    <div data-controller="dialog folderNav">
+  <h1 class="page__title">Modal with Folder Nav</h1>
+  <p>
+    This version helps to reduce the number of clicks when navigating folders. Currently, you have to 1) click the select field and 2) click the folder you want. Here, we're cutting that number in half.
   </p>
-  <p class="text--lg">
-    Folder navigation is well trod territory, so it might be helpful to
-    take a cue from existing patterns. As a bonus, you could also display
-    the contents of the selected folder in case that extra context is
-    helpful.
+  <p>
+    To reduce clicks further, we could have a project pre-selected when the modal opens—perhaps the last project they copied something to.
+  </p>
+  <p>
+    Folder navigation is well trod territory, so it might be helpful to take a cue from existing patterns. As a bonus, you could also display the contents of the selected folder in case that extra context is helpful.
   </p>
 
   
 
-<aside class="menu menu--open" data-controller="menu">
+<aside class="menu" data-controller="menu">
   <button
     data-action="menu#next"
     class="menu__open button button--circle"
@@ -190,116 +188,53 @@
   
   <dialog data-dialog-target="dialog" class="dialog">
   <h2 class="dialog__title">Copy this document to…</h2>
-  <select data-dialog-target="select" class="select select--lg">
-    <option>This Project</option>
-    <option>Blog Revamp</option>
-    <option>CoffeeScript Refactor</option>
-    <option>Customer Support</option>
-    <option>Podcast Production</option>
-  </select>
   
-    <div class="font--medium mb-sm">Choose a folder</div>
+    <select class="dialog__select select select--lg">
+      <option>This Project</option>
+      <option>Blog Revamp</option>
+      <option>CoffeeScript Refactor</option>
+      <option>Customer Support</option>
+      <option>Podcast Production</option>
+    </select>
+
+    <div class="font-medium text-base mb-2">Choose a folder</div>
     <div class="folder-nav" data-controller="folderNav">
       
         <ul data-folderNav-target="list" class="folder-nav__list">
           
             <li class="folder-nav__item">
               <button data-action="folderNav#select" class="folder-nav__button">
-                Folder Folder A
+                Folder A
               </button>
             </li>
           
             <li class="folder-nav__item">
               <button data-action="folderNav#select" class="folder-nav__button">
-                Folder Folder B
+                Folder B
               </button>
             </li>
           
             <li class="folder-nav__item">
               <button data-action="folderNav#select" class="folder-nav__button">
-                Folder Folder C
+                Folder C
               </button>
             </li>
           
             <li class="folder-nav__item">
               <button data-action="folderNav#select" class="folder-nav__button">
-                Folder Folder D
+                Folder D
               </button>
             </li>
           
             <li class="folder-nav__item">
               <button data-action="folderNav#select" class="folder-nav__button">
-                Folder Folder E
+                Folder E
               </button>
             </li>
           
             <li class="folder-nav__item">
               <button data-action="folderNav#select" class="folder-nav__button">
-                Folder Folder F
-              </button>
-            </li>
-          
-        </ul>
-      
-        <ul data-folderNav-target="list" class="folder-nav__list">
-          
-            <li class="folder-nav__item">
-              <button data-action="folderNav#select" class="folder-nav__button">
-                Folder Folder A
-              </button>
-            </li>
-          
-            <li class="folder-nav__item">
-              <button data-action="folderNav#select" class="folder-nav__button">
-                Folder Folder B
-              </button>
-            </li>
-          
-            <li class="folder-nav__item">
-              <button data-action="folderNav#select" class="folder-nav__button">
-                Folder Folder C
-              </button>
-            </li>
-          
-            <li class="folder-nav__item">
-              <button data-action="folderNav#select" class="folder-nav__button">
-                Folder Folder D
-              </button>
-            </li>
-          
-            <li class="folder-nav__item">
-              <button data-action="folderNav#select" class="folder-nav__button">
-                Folder Folder E
-              </button>
-            </li>
-          
-            <li class="folder-nav__item">
-              <button data-action="folderNav#select" class="folder-nav__button">
-                Folder Folder F
-              </button>
-            </li>
-          
-            <li class="folder-nav__item">
-              <button data-action="folderNav#select" class="folder-nav__button">
-                Folder Folder G
-              </button>
-            </li>
-          
-            <li class="folder-nav__item">
-              <button data-action="folderNav#select" class="folder-nav__button">
-                Folder Folder H
-              </button>
-            </li>
-          
-            <li class="folder-nav__item">
-              <button data-action="folderNav#select" class="folder-nav__button">
-                Folder Folder I
-              </button>
-            </li>
-          
-            <li class="folder-nav__item">
-              <button data-action="folderNav#select" class="folder-nav__button">
-                Folder Folder J
+                Folder F
               </button>
             </li>
           
@@ -309,31 +244,61 @@
           
             <li class="folder-nav__item">
               <button data-action="folderNav#select" class="folder-nav__button">
-                Folder Folder A
+                Folder A
               </button>
             </li>
           
             <li class="folder-nav__item">
               <button data-action="folderNav#select" class="folder-nav__button">
-                Folder Folder B
+                Folder B
               </button>
             </li>
           
             <li class="folder-nav__item">
               <button data-action="folderNav#select" class="folder-nav__button">
-                Folder Folder C
+                Folder C
               </button>
             </li>
           
             <li class="folder-nav__item">
               <button data-action="folderNav#select" class="folder-nav__button">
-                Folder Folder D
+                Folder D
               </button>
             </li>
           
             <li class="folder-nav__item">
               <button data-action="folderNav#select" class="folder-nav__button">
-                Folder Folder E
+                Folder E
+              </button>
+            </li>
+          
+            <li class="folder-nav__item">
+              <button data-action="folderNav#select" class="folder-nav__button">
+                Folder F
+              </button>
+            </li>
+          
+            <li class="folder-nav__item">
+              <button data-action="folderNav#select" class="folder-nav__button">
+                Folder G
+              </button>
+            </li>
+          
+            <li class="folder-nav__item">
+              <button data-action="folderNav#select" class="folder-nav__button">
+                Folder H
+              </button>
+            </li>
+          
+            <li class="folder-nav__item">
+              <button data-action="folderNav#select" class="folder-nav__button">
+                Folder I
+              </button>
+            </li>
+          
+            <li class="folder-nav__item">
+              <button data-action="folderNav#select" class="folder-nav__button">
+                Folder J
               </button>
             </li>
           
@@ -343,19 +308,53 @@
           
             <li class="folder-nav__item">
               <button data-action="folderNav#select" class="folder-nav__button">
-                Folder Folder A
+                Folder A
               </button>
             </li>
           
             <li class="folder-nav__item">
               <button data-action="folderNav#select" class="folder-nav__button">
-                Folder Folder B
+                Folder B
               </button>
             </li>
           
             <li class="folder-nav__item">
               <button data-action="folderNav#select" class="folder-nav__button">
-                Folder Folder C
+                Folder C
+              </button>
+            </li>
+          
+            <li class="folder-nav__item">
+              <button data-action="folderNav#select" class="folder-nav__button">
+                Folder D
+              </button>
+            </li>
+          
+            <li class="folder-nav__item">
+              <button data-action="folderNav#select" class="folder-nav__button">
+                Folder E
+              </button>
+            </li>
+          
+        </ul>
+      
+        <ul data-folderNav-target="list" class="folder-nav__list">
+          
+            <li class="folder-nav__item">
+              <button data-action="folderNav#select" class="folder-nav__button">
+                Folder A
+              </button>
+            </li>
+          
+            <li class="folder-nav__item">
+              <button data-action="folderNav#select" class="folder-nav__button">
+                Folder B
+              </button>
+            </li>
+          
+            <li class="folder-nav__item">
+              <button data-action="folderNav#select" class="folder-nav__button">
+                Folder C
               </button>
             </li>
           

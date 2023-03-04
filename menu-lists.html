@@ -11,7 +11,7 @@
   </head>
   <body>
     <nav class="nav">
-  <div class="nav__item"><a href="../">Back to Prototypes</a></div>
+  <div class="nav__item"><a href="../">Fakecamp</a></div>
   <ul class="nav__list">
     <li class="nav__item">Home</li>
     <li class="nav__item">Lineup</li>
@@ -43,17 +43,18 @@
     </nav>
   
   <div class="page panel panel--lg rounded relative">
-    <h1><span class="group-highlight">To-Do Group</span></h1>
+    <h1 class="page__title"><span class="group-highlight">To-Do Group</span></h1>
 
-<p class="text--lg">
-  To-do Groups are a little different becase they need to be placed
-  inside an existing to-do list. This solution accounts for that second
-  layer of hierarchy (Project › To-Do List) via a multi-level menu.
+<p>
+  To-Do items and groups need to be placed inside an existing list. This solution accounts for that second layer of hierarchy (Project › To-Do List) via a multi-level menu.
+</p>
+<p>
+  Try copying this To-Do group to <strong>Podcast Production › Episode 12</strong>.
 </p>
 
 
 
-<aside class="menu menu--open" data-controller="menu">
+<aside class="menu" data-controller="menu">
   <button
     data-action="menu#next"
     class="menu__open button button--circle"
@@ -259,59 +260,48 @@
         <ul class="menu__list">
           
             <li data-menu-target="menuItem" class="menu__item">
-              <button data-action="menu#selectItem" class="menu__button">
+              <button data-action="menu#confirm" class="menu__button">
                 Episode 11
               </button>
               
             </li>
           
             <li data-menu-target="menuItem" class="menu__item">
-              <button data-action="menu#selectItem" class="menu__button">
+              <button data-action="menu#confirm" class="menu__button">
                 Episode 12
               </button>
               
             </li>
           
             <li data-menu-target="menuItem" class="menu__item">
-              <button data-action="menu#selectItem" class="menu__button">
+              <button data-action="menu#confirm" class="menu__button">
                 Episode 13
               </button>
               
             </li>
           
             <li data-menu-target="menuItem" class="menu__item">
-              <button data-action="menu#selectItem" class="menu__button">
+              <button data-action="menu#confirm" class="menu__button">
                 Episode 14
               </button>
               
             </li>
           
             <li data-menu-target="menuItem" class="menu__item">
-              <button data-action="menu#selectItem" class="menu__button">
+              <button data-action="menu#confirm" class="menu__button">
                 Episode 15
               </button>
               
             </li>
           
             <li data-menu-target="menuItem" class="menu__item">
-              <button data-action="menu#selectItem" class="menu__button">
+              <button data-action="menu#confirm" class="menu__button">
                 Episode 16
               </button>
               
             </li>
           
         </ul>
-        
-          <footer class="menu__footer">
-            <button
-              data-action="menu#confirm"
-              data-menu-target="confirmButton"
-              class="button button--solid button--inverted"
-              disabled
-            >
-              Copy here
-            </button>
-          </footer>
         
       </div>
     
