@@ -20,9 +20,11 @@ menu_sections:
         action: menu#next
       - title: Customer Support
         action: menu#next
+      - title: Empty Project
+        action: menu#showEmpty
       - title: Podcast Production
         action: menu#next
-  - heading: Select a to-do list…
+  - heading: Choose a to-do list…
     items:
       - title: Episode 11
         action: menu#confirm
@@ -43,8 +45,14 @@ menu_sections:
 <p>
   To-Do items and groups need to be placed inside an existing list. This solution accounts for that second layer of hierarchy (Project › To-do list) via a multi-level menu.
 </p>
-<p>
-  Try copying this item to <strong>Podcast Production › Episode 12</strong>.
-</p>
+<p>To get a feel for this prototype:</p>
+<ul class="list list--decimal">
+  <li>
+    Copy this item to <strong>Podcast Production › Episode 12</strong>.
+  </li>
+  <li>
+    Try to copy this item to <strong>Empty Project</strong>, a project without any existing To-do lists.
+  </li>
+</ul>
 
 {% include menu.html %}

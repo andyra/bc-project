@@ -4,7 +4,12 @@ const MENU_WIDTH = 260;
 const SELECTED_CLASS = "menu__item--selected";
 
 export default class extends Controller {
-  static targets = ["confirmButton", "menuItem", "menuSection"];
+  static targets = [
+    "confirmButton",
+    "emptyProjectMessage",
+    "menuItem",
+    "menuSection",
+  ];
   static values = {
     index: {
       type: Number,
@@ -34,6 +39,16 @@ export default class extends Controller {
 
   confirm() {
     this.close();
+  }
+
+  showEmpty() {
+    console.log("showEmpty");
+    this.emptyProjectMessageTarget.classList.remove("hidden");
+  }
+
+  hideEmpty() {
+    console.log("hideEmpty");
+    this.emptyProjectMessageTarget.classList.add("hidden");
   }
 
   selectItem(event) {

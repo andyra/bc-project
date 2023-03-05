@@ -72,6 +72,10 @@
 
 .menu__list {
   margin: 0 calc(var(--padding-x) * -1);
+  position: relative;
+}
+
+.menu__list--clamp {
   max-height: 320px;
   overflow-y: auto;
 }
@@ -85,6 +89,16 @@
 .menu__item:hover,
 .menu__item--selected {
   background-color: var(--blue-dark);
+}
+
+.menu__empty-message {
+  background-color: var(--blue);
+  height: 100%;
+  left: 0;
+  padding: 0 12px;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
 
 .menu__button {

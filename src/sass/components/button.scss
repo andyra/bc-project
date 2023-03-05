@@ -4,13 +4,12 @@
   border-radius: 999rem;
   border: solid 1px var(--gray-lighter);
   cursor: pointer;
-  display: flex;
+  display: inline-flex;
   font-size: 16px;
   height: 32px;
   justify-content: center;
   padding: 0 12px;
   text-decoration: none;
-  width: fit-content;
 
   img {
     height: 20px;
