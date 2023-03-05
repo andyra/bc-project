@@ -46,9 +46,15 @@
 <p>
   To-Do items and groups need to be placed inside an existing list. This solution accounts for that second layer of hierarchy (Project › To-do list) via a multi-level menu.
 </p>
-<p>
-  Try copying this item to <strong>Podcast Production › Episode 12</strong>.
-</p>
+<p>To get a feel for this prototype:</p>
+<ul class="list list--decimal">
+  <li>
+    Copy this item to <strong>Podcast Production › Episode 12</strong>.
+  </li>
+  <li>
+    Try to copy this item to <strong>Empty Project</strong>, a project without any existing To-do lists.
+  </li>
+</ul>
 
 
 
@@ -198,44 +204,64 @@
             <img src="assets/images/x.svg" aria-hidden />
           </button>
         </header>
-        <ul class="menu__list">
-          
-            <li data-menu-target="menuItem" class="menu__item">
-              <button data-action="menu#next" class="menu__button">
-                This Project
+        
+          <ul class="menu__list">
+            
+              <li data-menu-target="menuItem" class="menu__item">
+                <button data-action="menu#next" class="menu__button">
+                  This Project
+                </button>
+                
+              </li>
+            
+              <li data-menu-target="menuItem" class="menu__item">
+                <button data-action="menu#next" class="menu__button">
+                  Blog Revamp
+                </button>
+                
+              </li>
+            
+              <li data-menu-target="menuItem" class="menu__item">
+                <button data-action="menu#next" class="menu__button">
+                  CoffeeScript Refactor
+                </button>
+                
+              </li>
+            
+              <li data-menu-target="menuItem" class="menu__item">
+                <button data-action="menu#next" class="menu__button">
+                  Customer Support
+                </button>
+                
+              </li>
+            
+              <li data-menu-target="menuItem" class="menu__item">
+                <button data-action="menu#showEmpty" class="menu__button">
+                  Empty Project
+                </button>
+                
+              </li>
+            
+              <li data-menu-target="menuItem" class="menu__item">
+                <button data-action="menu#next" class="menu__button">
+                  Podcast Production
+                </button>
+                
+              </li>
+            
+            <li data-menu-target="emptyProjectMessage" class="menu__empty-message hidden">
+              <p>
+                <strong>Empty Project</strong> doesn't have any to-do lists yet. <span class="underline">Add a to-do list</span> there first, or choose a different project.
+              </p>
+              <button
+                class="button button--solid button--inverted button--sm"
+                data-action="menu#hideEmpty"
+              >
+                Choose a different project
               </button>
-              
             </li>
-          
-            <li data-menu-target="menuItem" class="menu__item">
-              <button data-action="menu#next" class="menu__button">
-                Blog Revamp
-              </button>
-              
-            </li>
-          
-            <li data-menu-target="menuItem" class="menu__item">
-              <button data-action="menu#next" class="menu__button">
-                CoffeeScript Refactor
-              </button>
-              
-            </li>
-          
-            <li data-menu-target="menuItem" class="menu__item">
-              <button data-action="menu#next" class="menu__button">
-                Customer Support
-              </button>
-              
-            </li>
-          
-            <li data-menu-target="menuItem" class="menu__item">
-              <button data-action="menu#next" class="menu__button">
-                Podcast Production
-              </button>
-              
-            </li>
-          
-        </ul>
+          </ul>
+        
         
       </div>
     
@@ -247,7 +273,7 @@
           >
             <img src="assets/images/chevron-left.svg" aria-hidden />
           </button>
-          <div class="menu__title">Select a to-do list…</div>
+          <div class="menu__title">Choose a to-do list…</div>
           <button
             class="menu__close button button--circle button--inverted"
             data-action="menu#close"
@@ -255,51 +281,64 @@
             <img src="assets/images/x.svg" aria-hidden />
           </button>
         </header>
-        <ul class="menu__list">
-          
-            <li data-menu-target="menuItem" class="menu__item">
-              <button data-action="menu#confirm" class="menu__button">
-                Episode 11
+        
+          <ul class="menu__list">
+            
+              <li data-menu-target="menuItem" class="menu__item">
+                <button data-action="menu#confirm" class="menu__button">
+                  Episode 11
+                </button>
+                
+              </li>
+            
+              <li data-menu-target="menuItem" class="menu__item">
+                <button data-action="menu#confirm" class="menu__button">
+                  Episode 12
+                </button>
+                
+              </li>
+            
+              <li data-menu-target="menuItem" class="menu__item">
+                <button data-action="menu#confirm" class="menu__button">
+                  Episode 13
+                </button>
+                
+              </li>
+            
+              <li data-menu-target="menuItem" class="menu__item">
+                <button data-action="menu#confirm" class="menu__button">
+                  Episode 14
+                </button>
+                
+              </li>
+            
+              <li data-menu-target="menuItem" class="menu__item">
+                <button data-action="menu#confirm" class="menu__button">
+                  Episode 15
+                </button>
+                
+              </li>
+            
+              <li data-menu-target="menuItem" class="menu__item">
+                <button data-action="menu#confirm" class="menu__button">
+                  Episode 16
+                </button>
+                
+              </li>
+            
+            <li data-menu-target="emptyProjectMessage" class="menu__empty-message hidden">
+              <p>
+                <strong>Empty Project</strong> doesn't have any to-do lists yet. <span class="underline">Add a to-do list</span> there first, or choose a different project.
+              </p>
+              <button
+                class="button button--solid button--inverted button--sm"
+                data-action="menu#hideEmpty"
+              >
+                Choose a different project
               </button>
-              
             </li>
-          
-            <li data-menu-target="menuItem" class="menu__item">
-              <button data-action="menu#confirm" class="menu__button">
-                Episode 12
-              </button>
-              
-            </li>
-          
-            <li data-menu-target="menuItem" class="menu__item">
-              <button data-action="menu#confirm" class="menu__button">
-                Episode 13
-              </button>
-              
-            </li>
-          
-            <li data-menu-target="menuItem" class="menu__item">
-              <button data-action="menu#confirm" class="menu__button">
-                Episode 14
-              </button>
-              
-            </li>
-          
-            <li data-menu-target="menuItem" class="menu__item">
-              <button data-action="menu#confirm" class="menu__button">
-                Episode 15
-              </button>
-              
-            </li>
-          
-            <li data-menu-target="menuItem" class="menu__item">
-              <button data-action="menu#confirm" class="menu__button">
-                Episode 16
-              </button>
-              
-            </li>
-          
-        </ul>
+          </ul>
+        
         
       </div>
     

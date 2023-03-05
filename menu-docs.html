@@ -198,44 +198,57 @@
             <img src="assets/images/x.svg" aria-hidden />
           </button>
         </header>
-        <ul class="menu__list">
-          
-            <li data-menu-target="menuItem" class="menu__item">
-              <button data-action="menu#next" class="menu__button">
-                This Project
+        
+          <ul class="menu__list">
+            
+              <li data-menu-target="menuItem" class="menu__item">
+                <button data-action="menu#next" class="menu__button">
+                  This Project
+                </button>
+                
+              </li>
+            
+              <li data-menu-target="menuItem" class="menu__item">
+                <button data-action="menu#next" class="menu__button">
+                  Blog Revamp
+                </button>
+                
+              </li>
+            
+              <li data-menu-target="menuItem" class="menu__item">
+                <button data-action="menu#next" class="menu__button">
+                  CoffeeScript Refactor
+                </button>
+                
+              </li>
+            
+              <li data-menu-target="menuItem" class="menu__item">
+                <button data-action="menu#next" class="menu__button">
+                  Customer Support
+                </button>
+                
+              </li>
+            
+              <li data-menu-target="menuItem" class="menu__item">
+                <button data-action="menu#next" class="menu__button">
+                  Podcast Production
+                </button>
+                
+              </li>
+            
+            <li data-menu-target="emptyProjectMessage" class="menu__empty-message hidden">
+              <p>
+                <strong>Empty Project</strong> doesn't have any to-do lists yet. <span class="underline">Add a to-do list</span> there first, or choose a different project.
+              </p>
+              <button
+                class="button button--solid button--inverted button--sm"
+                data-action="menu#hideEmpty"
+              >
+                Choose a different project
               </button>
-              
             </li>
-          
-            <li data-menu-target="menuItem" class="menu__item">
-              <button data-action="menu#next" class="menu__button">
-                Blog Revamp
-              </button>
-              
-            </li>
-          
-            <li data-menu-target="menuItem" class="menu__item">
-              <button data-action="menu#next" class="menu__button">
-                CoffeeScript Refactor
-              </button>
-              
-            </li>
-          
-            <li data-menu-target="menuItem" class="menu__item">
-              <button data-action="menu#next" class="menu__button">
-                Customer Support
-              </button>
-              
-            </li>
-          
-            <li data-menu-target="menuItem" class="menu__item">
-              <button data-action="menu#next" class="menu__button">
-                Podcast Production
-              </button>
-              
-            </li>
-          
-        </ul>
+          </ul>
+        
         
       </div>
     
@@ -247,7 +260,7 @@
           >
             <img src="assets/images/chevron-left.svg" aria-hidden />
           </button>
-          <div class="menu__title">Select a folder…</div>
+          <div class="menu__title">Choose a folder…</div>
           <button
             class="menu__close button button--circle button--inverted"
             data-action="menu#close"
@@ -255,31 +268,44 @@
             <img src="assets/images/x.svg" aria-hidden />
           </button>
         </header>
-        <ul class="menu__list">
-          
-            <li data-menu-target="menuItem" class="menu__item">
-              <button data-action="menu#selectItem" class="menu__button">
-                Ideas
-              </button>
-              
-                <button
-                  data-action="menu#next"
-                  class=" menu__view-children button button--circle button--sm button--solid button--inverted"
-                  title="View children"
-                >
-                  <img src="assets/images/arrow-right.svg" aria-hidden />
+        
+          <ul class="menu__list">
+            
+              <li data-menu-target="menuItem" class="menu__item">
+                <button data-action="menu#selectItem" class="menu__button">
+                  Ideas
                 </button>
-              
-            </li>
-          
-            <li data-menu-target="menuItem" class="menu__item">
-              <button data-action="menu#selectItem" class="menu__button">
-                Bug Reports
+                
+                  <button
+                    data-action="menu#next"
+                    class=" menu__view-children button button--circle button--sm button--solid button--inverted"
+                    title="View children"
+                  >
+                    <img src="assets/images/arrow-right.svg" aria-hidden />
+                  </button>
+                
+              </li>
+            
+              <li data-menu-target="menuItem" class="menu__item">
+                <button data-action="menu#selectItem" class="menu__button">
+                  Bug Reports
+                </button>
+                
+              </li>
+            
+            <li data-menu-target="emptyProjectMessage" class="menu__empty-message hidden">
+              <p>
+                <strong>Empty Project</strong> doesn't have any to-do lists yet. <span class="underline">Add a to-do list</span> there first, or choose a different project.
+              </p>
+              <button
+                class="button button--solid button--inverted button--sm"
+                data-action="menu#hideEmpty"
+              >
+                Choose a different project
               </button>
-              
             </li>
-          
-        </ul>
+          </ul>
+        
         
           <footer class="menu__footer">
             <button
@@ -302,7 +328,7 @@
           >
             <img src="assets/images/chevron-left.svg" aria-hidden />
           </button>
-          <div class="menu__title">Select a folder…</div>
+          <div class="menu__title">Choose a folder…</div>
           <button
             class="menu__close button button--circle button--inverted"
             data-action="menu#close"
@@ -310,30 +336,43 @@
             <img src="assets/images/x.svg" aria-hidden />
           </button>
         </header>
-        <ul class="menu__list">
-          
-            <li data-menu-target="menuItem" class="menu__item">
-              <button data-action="menu#selectItem" class="menu__button">
-                Good Ideas
+        
+          <ul class="menu__list">
+            
+              <li data-menu-target="menuItem" class="menu__item">
+                <button data-action="menu#selectItem" class="menu__button">
+                  Good Ideas
+                </button>
+                
+              </li>
+            
+              <li data-menu-target="menuItem" class="menu__item">
+                <button data-action="menu#selectItem" class="menu__button">
+                  Funny Ideas
+                </button>
+                
+              </li>
+            
+              <li data-menu-target="menuItem" class="menu__item">
+                <button data-action="menu#selectItem" class="menu__button">
+                  Strange Ideas
+                </button>
+                
+              </li>
+            
+            <li data-menu-target="emptyProjectMessage" class="menu__empty-message hidden">
+              <p>
+                <strong>Empty Project</strong> doesn't have any to-do lists yet. <span class="underline">Add a to-do list</span> there first, or choose a different project.
+              </p>
+              <button
+                class="button button--solid button--inverted button--sm"
+                data-action="menu#hideEmpty"
+              >
+                Choose a different project
               </button>
-              
             </li>
-          
-            <li data-menu-target="menuItem" class="menu__item">
-              <button data-action="menu#selectItem" class="menu__button">
-                Funny Ideas
-              </button>
-              
-            </li>
-          
-            <li data-menu-target="menuItem" class="menu__item">
-              <button data-action="menu#selectItem" class="menu__button">
-                Strange Ideas
-              </button>
-              
-            </li>
-          
-        </ul>
+          </ul>
+        
         
           <footer class="menu__footer">
             <button

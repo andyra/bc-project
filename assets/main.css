@@ -141949,14 +141949,12 @@ p {
   border-radius: 999rem;
   border: solid 1px var(--gray-lighter);
   cursor: pointer;
-  display: flex;
+  display: inline-flex;
   font-size: 16px;
   height: 32px;
   justify-content: center;
   padding: 0 12px;
   text-decoration: none;
-  width: -moz-fit-content;
-  width: fit-content;
 }
 
 .button img {
@@ -142226,6 +142224,10 @@ p {
 
 .menu__list {
   margin: 0 calc(var(--padding-x) * -1);
+  position: relative;
+}
+
+.menu__list--clamp {
   max-height: 320px;
   overflow-y: auto;
 }
@@ -142239,6 +142241,16 @@ p {
 .menu__item:hover,
 .menu__item--selected {
   background-color: var(--blue-dark);
+}
+
+.menu__empty-message {
+  background-color: var(--blue);
+  height: 100%;
+  left: 0;
+  padding: 0 12px;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
 
 .menu__button {
@@ -142366,6 +142378,9 @@ p {
 }
 
 .select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   border: solid 1px var(--gray-lighter);
   border-radius: 999rem;
   font-size: var(--font-size-base);

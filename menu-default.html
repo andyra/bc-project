@@ -195,44 +195,57 @@
             <img src="assets/images/x.svg" aria-hidden />
           </button>
         </header>
-        <ul class="menu__list">
-          
-            <li data-menu-target="menuItem" class="menu__item">
-              <button data-action="menu#confirm" class="menu__button">
-                This Project
+        
+          <ul class="menu__list">
+            
+              <li data-menu-target="menuItem" class="menu__item">
+                <button data-action="menu#confirm" class="menu__button">
+                  This Project
+                </button>
+                
+              </li>
+            
+              <li data-menu-target="menuItem" class="menu__item">
+                <button data-action="menu#confirm" class="menu__button">
+                  Blog Revamp
+                </button>
+                
+              </li>
+            
+              <li data-menu-target="menuItem" class="menu__item">
+                <button data-action="menu#confirm" class="menu__button">
+                  CoffeeScript Refactor
+                </button>
+                
+              </li>
+            
+              <li data-menu-target="menuItem" class="menu__item">
+                <button data-action="menu#confirm" class="menu__button">
+                  Customer Support
+                </button>
+                
+              </li>
+            
+              <li data-menu-target="menuItem" class="menu__item">
+                <button data-action="menu#confirm" class="menu__button">
+                  Podcast Production
+                </button>
+                
+              </li>
+            
+            <li data-menu-target="emptyProjectMessage" class="menu__empty-message hidden">
+              <p>
+                <strong>Empty Project</strong> doesn't have any to-do lists yet. <span class="underline">Add a to-do list</span> there first, or choose a different project.
+              </p>
+              <button
+                class="button button--solid button--inverted button--sm"
+                data-action="menu#hideEmpty"
+              >
+                Choose a different project
               </button>
-              
             </li>
-          
-            <li data-menu-target="menuItem" class="menu__item">
-              <button data-action="menu#confirm" class="menu__button">
-                Blog Revamp
-              </button>
-              
-            </li>
-          
-            <li data-menu-target="menuItem" class="menu__item">
-              <button data-action="menu#confirm" class="menu__button">
-                CoffeeScript Refactor
-              </button>
-              
-            </li>
-          
-            <li data-menu-target="menuItem" class="menu__item">
-              <button data-action="menu#confirm" class="menu__button">
-                Customer Support
-              </button>
-              
-            </li>
-          
-            <li data-menu-target="menuItem" class="menu__item">
-              <button data-action="menu#confirm" class="menu__button">
-                Podcast Production
-              </button>
-              
-            </li>
-          
-        </ul>
+          </ul>
+        
         
       </div>
     
